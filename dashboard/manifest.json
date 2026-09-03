@@ -1,0 +1,13 @@
+{
+  "name": "glance-surfaces",
+  "label": "Glance",
+  "description": "Agent-surface findings for this Hermes install: MCP server configs and skill files.",
+  "icon": "ShieldCheck",
+  "version": "0.1.0",
+  "tab": {
+    "path": "/glance",
+    "position": "end"
+  },
+  "entry": "index.js",
+  "api": "plugin_api.py"
+}
