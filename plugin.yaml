@@ -1,0 +1,16 @@
+# `kind` is deliberately absent. The loader defaults to "standalone", which is
+# what this is. The valid values are standalone, backend, exclusive, platform
+# and model-provider; "agent-plugin" and "combined" are not among them.
+#
+# `homepage` is deliberately absent until the site is redeployed, and there is
+# no hermes:// install link anywhere: that scheme is not in the plugin
+# documentation and is unverified.
+name: glance-surfaces
+version: "0.1.0"
+description: "Scan Hermes agent surfaces with glance-scanner: MCP server configs and skill files, checked for prompt injection, hidden instructions, obfuscated text, exfiltration instructions, inline credentials and unencrypted transports. Detection lives in the scanner; this adapter discovers paths and reports. Reports to the human, never blocks."
+author: Golem Labs
+provides_hooks:
+  - on_session_start
+  - pre_llm_call
+  - on_skill_lifecycle
+  - on_session_end
